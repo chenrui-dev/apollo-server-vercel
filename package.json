@@ -8,11 +8,14 @@
     "dev": "nodemon dev"
   },
   "dependencies": {
+    "@graphql-tools/schema": "^8.3.5",
     "apollo-server-core": "^3.6.5",
     "apollo-server-express": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.17.3",
-    "graphql": "^16.3.0"
+    "graphql": "^16.3.0",
+    "graphql-rate-limit-directive": "^2.0.2",
+    "rate-limiter-flexible": "^2.3.6"
   },
   "devDependencies": {
     "consola": "^2.15.3",
