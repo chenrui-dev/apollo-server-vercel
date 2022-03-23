@@ -6,6 +6,7 @@ Setup an Apollo GraphQL Server On Vercel
 
 - [curl test](#curl-test)
   - [local test](#local-test)
+- [rate limit test](#rate-limit-test)
 - [credit](#credit)
 
 ## curl test
@@ -47,6 +48,25 @@ $ curl -s -X POST 'http://localhost:9001/graphql'   --header 'Content-Type: appl
 < Date: Wed, 23 Mar 2022 18:58:14 GMT
 < Connection: keep-alive
 < Keep-Alive: timeout=5
+```
+
+## rate limit test
+
+```
+$ curl -s -X POST 'http://localhost:9001/graphql'   --header 'Content-Type: application/json'   -d '{"query":"{\n    hello\n}","variables":{}}' -v
+...
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+< X-Powered-By: Express
+< Access-Control-Allow-Origin: *
+< Content-Type: application/json; charset=utf-8
+< Content-Length: 846
+< ETag: W/"34e-zNqtLJPRwRT52bI2MkoWmsTpvA8"
+< Date: Wed, 23 Mar 2022 19:31:27 GMT
+< Connection: keep-alive
+< Keep-Alive: timeout=5
+<
+{"errors":[{"message":"Too many requests, please try again in 13 seconds.","locations":[{"line":2,"column":5}],"path":["hello"],"extensions":{"code":"INTERNAL_SERVER_ERROR","exception":{"message":"Too many requests, please try again in 13 seconds.","stacktrace":["GraphQLError: Too many requests, please try again in 13 seconds.","    at defaultOnLimit (/Users/rui/open-source/apollo-server-vercel/node_modules/graphql-rate-limit-directive/dist/index.js:70:11)","    at /Users/rui/open-source/apollo-server-vercel/node_modules/graphql-rate-limit-directive/dist/index.js:128:28","    at Generator.throw (<anonymous>)","    at rejected (/Users/rui/open-source/apollo-server-vercel/node_modules/graphql-rate-limit-directive/dist/index.js:6:65)","    at processTicksAndRejections (node:internal/process/task_queues:96:5)"]}}}],"data":{"hello":null}}
 ```
 
 ## credit
