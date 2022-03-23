@@ -17,7 +17,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    hello: () => "world",
+    hello: () => "hello world from @chenrui333/apollo-server-vercel",
   },
 };
 
