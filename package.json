@@ -1,14 +1,22 @@
 {
   "name": "apollo-server-vercel",
-  "type" : "module",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon dev"
+  },
   "dependencies": {
     "apollo-server-core": "^3.6.5",
     "apollo-server-express": "^3.6.5",
     "cors": "^2.8.5",
     "express": "^4.17.3",
     "graphql": "^16.3.0"
+  },
+  "devDependencies": {
+    "consola": "^2.15.3",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
   }
 }
