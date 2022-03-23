@@ -1,5 +1,7 @@
 # apollo-server-vercel <!-- omit in toc -->
 
+[![deployment](https://img.shields.io/github/deployments/chenrui333/apollo-server-vercel/Production?label=vercel&style=flat-square)](https://github.com/chenrui333/apollo-server-vercel/deployments/activity_log?environment=Production)
+
 Setup an Apollo GraphQL Server On Vercel
 
 - [curl test](#curl-test)
