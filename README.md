@@ -36,17 +36,20 @@ curl -s -X POST 'https://apollo-server-vercel-nine.vercel.app/graphql' \
 ### local test
 
 ```
-$ curl -s -X POST 'http://localhost:9001/graphql'   --header 'Content-Type: application/json'   -d '{"query":"{\n    hello\n}","variables":{}}' -v
+$ curl -s -X POST 'http://localhost:9001/graphql'   --header 'Content-Type: application/json' --header 'session-id: 123'   -d '{"query":"{\n    hello\n}","variables":{}}' -v
 ...
 * Mark bundle as not supporting multiuse
 < HTTP/1.1 200 OK
 < X-Powered-By: Express
 < Access-Control-Allow-Origin: *
 < Content-Type: application/json; charset=utf-8
+< cache-control: max-age=60, public
+< age: 3
 < Content-Length: 71
 < ETag: W/"47-hvQv93zOyyIYmrUiU5wUNxTfVPY"
-< Date: Wed, 23 Mar 2022 18:58:14 GMT
+< Date: Fri, 15 Apr 2022 22:12:40 GMT
 < Connection: keep-alive
+< Keep-Alive: timeout=5
 < Keep-Alive: timeout=5
 ```
 
