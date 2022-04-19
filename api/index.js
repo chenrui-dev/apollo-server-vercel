@@ -80153,7 +80153,7 @@ var __webpack_exports__ = {};
 
 // EXPORTS
 __nccwpck_require__.d(__webpack_exports__, {
-  "Z": () => (/* binding */ api)
+  "Z": () => (/* binding */ src)
 });
 
 // EXTERNAL MODULE: ./node_modules/graphql/index.js
@@ -85834,7 +85834,7 @@ var external_http_ = __nccwpck_require__(3685);
 var express = __nccwpck_require__(1204);
 // EXTERNAL MODULE: ./node_modules/cors/lib/index.js
 var lib = __nccwpck_require__(3873);
-;// CONCATENATED MODULE: ./api/index.js
+;// CONCATENATED MODULE: ./src/index.js
 
 
 
@@ -85901,7 +85901,7 @@ const startApolloServer = async(app, httpServer) => {
 
 startApolloServer(app, httpServer);
 
-/* harmony default export */ const api = (httpServer);
+/* harmony default export */ const src = (httpServer);
 
 })();
 
