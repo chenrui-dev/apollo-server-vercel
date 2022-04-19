@@ -1,4 +1,4 @@
-import app from "./api/index.js";
+import app from "./src/index.js";
 import consola from "consola";
 import dotenv from "dotenv";
 
