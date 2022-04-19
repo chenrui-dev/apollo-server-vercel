@@ -5,7 +5,6 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "ncc build api/index.js -o dist",
     "dev": "nodemon dev"
   },
   "dependencies": {
@@ -20,7 +19,6 @@
     "rate-limiter-flexible": "^2.3.6"
   },
   "devDependencies": {
-    "@vercel/ncc": "0.33.4",
     "consola": "^2.15.3",
     "dotenv": "^16.0.0",
     "nodemon": "^2.0.15"
